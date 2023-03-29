@@ -47,7 +47,7 @@ fetch(url)
                     encoding: "utf8",
                     flag: "w",
                   });
-                  console.log(`${nowTime()} : 写入到${localPath} 完毕`);
+                  console.log(`${Date.now()} : 写入到${localPath} 完毕`);
                 });
               })
               .on("error", (err) => {
