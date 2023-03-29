@@ -1,10 +1,14 @@
-import fetch from "node-fetch";
-
 import fs from "fs";
 import https from "https";
+import fetch from "node-fetch";
+import path from "path";
 
 // const remoteUrl = 'https://api.subcloud.xyz/sub?target=clash&url=%E8%AE%A2%E5%8D%95&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&new_name=true';
-const localPath = "./sub.yml";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const localPath = path.join(__dirname, "./sub.yml");
 
 const url =
   "https://api.github.com/repos/h7ml/okjiasu_action/contents/package/okjiasu/free";
