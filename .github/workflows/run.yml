@@ -1,0 +1,34 @@
+name: auto sub
+on:
+  schedule:
+    # `分 时 天 月 周` 时按照标准时间 北京时间=标准时间+8 2表示北京时间早上6点
+    - cron: '0 05 * * *'
+  workflow_dispatch:
+
+jobs:
+  check_in:
+    runs-on: ubuntu-latest
+    steps:
+      # 切换分支
+      - name: Checkout
+        uses: actions/checkout@master
+
+      # 使用 node:14
+      - name: 使用 Node.js 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      # npm install
+      - name: npm install
+        run: |
+          npm install
+        env:
+          CI: true
+
+      # 运行脚本
+      - name: 运行脚本
+        run: |
+          npm start
+        env:
+          CI: true
