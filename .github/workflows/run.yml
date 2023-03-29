@@ -7,6 +7,10 @@ on:
     - cron: '0 05 * * *'
   workflow_dispatch:
 
+# 设置上海时区
+env:
+  TZ: Asia/Shanghai
+
 jobs:
   check_in:
     runs-on: ubuntu-latest
