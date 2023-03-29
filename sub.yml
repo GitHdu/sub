@@ -715,7 +715,7 @@ rules:
  - DOMAIN-SUFFIX,zantainet.com,🛑 全球拦截
  - DOMAIN-SUFFIX,dh54wf.xyz,🛑 全球拦截
  - DOMAIN-SUFFIX,g2q3e.cn,🛑 全球拦截
- - DOMAIN-SUFFIX,114so.cn,🛑 全球���截
+ - DOMAIN-SUFFIX,114so.cn,🛑 全球拦截
  - DOMAIN-SUFFIX,go.10086.cn,🛑 全球拦截
  - DOMAIN-SUFFIX,hivedata.cc,🛑 全球拦截
  - DOMAIN-SUFFIX,navi.gd.chinamobile.com,🛑 全球拦截
@@ -1975,7 +1975,7 @@ rules:
  - DOMAIN,play-edge.itunes.apple.com,🌍 国外媒体
  - DOMAIN-SUFFIX,tv.apple.com,🌍 国外媒体
  - DOMAIN-KEYWORD,bbcfmt,🌍 国外媒体
- - DOMAIN-KEYWORD,uk-live,🌍 国外媒体
+ - DOMAIN-KEYWORD,uk-live,🌍 国��媒体
  - DOMAIN,aod-dash-uk-live.akamaized.net,🌍 国外媒体
  - DOMAIN,aod-hls-uk-live.akamaized.net,🌍 国外媒体
  - DOMAIN,vod-dash-uk-live.akamaized.net,🌍 国外媒体
