@@ -44,10 +44,7 @@ fetch(url)
                   data += chunk;
                 });
                 res.on("end", async () => {
-                  await fs.writeFileSync(localPath, data, {
-                    encoding: "utf8",
-                    flag: "w",
-                  });
+                  await fs.writeFileSync(localPath, data);
                   console.log(`${Date.now()} : 写入到${localPath} 完毕`);
                 });
               })
