@@ -44,7 +44,7 @@ fetch(url)
                   data += chunk;
                 });
                 res.on("end", async () => {
-                  await fs.writeFileSync(localPath, data);
+                  await fs.writeFileSync(localPath, `\uFEFF${data}`);
                   console.log(`${Date.now()} : 写入到${localPath} 完毕`);
                 });
               })
