@@ -25,3 +25,10 @@ jobs:
         run: yarn install
       - name: serve
         run: yarn run start
+      - name: deploy
+        # 使用github-pages-deploy-action: https://github.com/JamesIves/github-pages-deploy-action/tree/master
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          BRANCH: main # The branch the action should deploy to.
+          FOLDER: . # The folder the action should deploy.
+          GITHUB_TOKEN: ${{ secrets.ACTION_SECRET }}
