@@ -38,11 +38,12 @@ fetch(url)
                 res.on("data", (chunk) => {
                   data += chunk;
                 });
-                res.on("end", () => {
-                  fs.writeFile(localPath, data, (err) => {
-                    if (err) throw err;
-                    console.log("文件已保存");
+                res.on("end", async () => {
+                  await fs.writeFileSync(localPath, data, {
+                    encoding: "utf8",
+                    flag: "w",
                   });
+                  console.log("文件已保存");
                 });
               })
               .on("error", (err) => {
