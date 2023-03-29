@@ -726,7 +726,7 @@ rules:
  - DOMAIN-SUFFIX,c.youdao.com,🍃 应用净化
  - DOMAIN-SUFFIX,clkservice.youdao.com,🍃 应用净化
  - DOMAIN-SUFFIX,conv.youdao.com,🍃 应用净化
- - DOMAIN-SUFFIX,dsp-impr2.youdao.com,🍃 应用��化
+ - DOMAIN-SUFFIX,dsp-impr2.youdao.com,🍃 应用净化
  - DOMAIN-SUFFIX,dsp.youdao.com,🍃 应用净化
  - DOMAIN-SUFFIX,fa.corp.163.com,🍃 应用净化
  - DOMAIN-SUFFIX,g.corp.163.com,🍃 应用净化
@@ -1975,7 +1975,7 @@ rules:
  - DOMAIN,play-edge.itunes.apple.com,🌍 国外媒体
  - DOMAIN-SUFFIX,tv.apple.com,🌍 国外媒体
  - DOMAIN-KEYWORD,bbcfmt,🌍 国外媒体
- - DOMAIN-KEYWORD,uk-live,🌍 国��媒体
+ - DOMAIN-KEYWORD,uk-live,🌍 国外媒体
  - DOMAIN,aod-dash-uk-live.akamaized.net,🌍 国外媒体
  - DOMAIN,aod-hls-uk-live.akamaized.net,🌍 国外媒体
  - DOMAIN,vod-dash-uk-live.akamaized.net,🌍 国外媒体
@@ -2319,7 +2319,7 @@ rules:
  - DOMAIN-SUFFIX,blogspot.hk,🚀 节点选择
  - DOMAIN-SUFFIX,blogspot.jp,🚀 节点选择
  - DOMAIN-SUFFIX,bloomberg.cn,🚀 节点选择
- - DOMAIN-SUFFIX,bloomberg.com,��� 节点选择
+ - DOMAIN-SUFFIX,bloomberg.com,🚀 节点选择
  - DOMAIN-SUFFIX,box.com,🚀 节点选择
  - DOMAIN-SUFFIX,cachefly.net,🚀 节点选择
  - DOMAIN-SUFFIX,cdnst.net,🚀 节点选择

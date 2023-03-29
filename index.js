@@ -39,12 +39,13 @@ fetch(url)
             console.log(subUrl);
             https
               .get(subUrl, (res) => {
+                res.setEncoding('utf8');
                 let data = "";
                 res.on("data", (chunk) => {
                   data += chunk;
                 });
                 res.on("end", async () => {
-                  await fs.writeFileSync(localPath, `\uFEFF${data}`, 'utf-8');
+                  await fs.writeFileSync(localPath, `\uFEFF${data}`, 'utf8');
                   console.log(`${Date.now()} : 写入到${localPath} 完毕`);
                 });
               })
