@@ -19,7 +19,7 @@ fetch(url)
     fetch(latest.url)
       .then((response) => response.json())
       .then((data) => {
-        const lastest = data[data.length - 1];
+        const lastest = data.find((item) => item.name.includes("freeList"));
         fetch(lastest.url)
           .then((response) => response.json())
           .then((data) => {
@@ -29,6 +29,11 @@ fetch(url)
             const urls = JSON.parse(content).map((item) => item.detail.UUid);
 
             const uniqUrls = [...new Set(urls)];
+            console.log(
+              "%c [ uniqUrls ]-32",
+              "font-size:13px; background:#32786f; color:#76bcb3;",
+              uniqUrls
+            );
             let sourceSub = uniqUrls.join("\n");
             sourceSub = sourceSub.replace(/(\n|\r|\n\r)/g, "|");
 
@@ -39,13 +44,13 @@ fetch(url)
             console.log(subUrl);
             https
               .get(subUrl, (res) => {
-                res.setEncoding('utf8');
+                res.setEncoding("utf8");
                 let data = "";
                 res.on("data", (chunk) => {
                   data += chunk;
                 });
                 res.on("end", async () => {
-                  await fs.writeFileSync(localPath, `\uFEFF${data}`, 'utf8');
+                  await fs.writeFileSync(localPath, `\uFEFF${data}`, "utf8");
                   console.log(`${Date.now()} : 写入到${localPath} 完毕`);
                 });
               })
